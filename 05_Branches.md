@@ -48,7 +48,46 @@ ref: refs/heads/master
 HEAD to master branch
 > pictures/HEAD-1
 
-HEAD to commit
+HEAD to commit // detached HEAD state
 > pictures/HEAD-2
 
+#### git checkout
+Changes HEAD to Commit/Branch
+ - .git/HEAD changes
+ - .git/refs/heads/master - does not change
+```bash
+git log --oneline
+d27d49d (HEAD -> master) Added 04_Common_Ops.md, 05_Branches.md
+aac42f5 Added info to Commits
+2b1d339 Adjusted the Commits README
+86bfae0 Initialized repo. Added Objects, Low Level Commands and Commits README file
+
+
+git checkout aac42
+Note: switching to 'aac42'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at aac42f5 Added info to Commits
+
+
+
+cat .git/HEAD
+aac42f51eb385cfe03a5fca7a34d6f7ec47f80d6
+
+git checkout master
+```
 
