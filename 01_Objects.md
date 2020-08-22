@@ -46,3 +46,5 @@ Object Types:
   - snapshot of the hierarchy (tree) and the contents of the files (blobs)
 - Annotated Tag
   - a text pointer to a specific commit
+  
+Hashed in sha1 hash. Directory is hexadecimal, thus 16*16 folders max in .git/objects/
