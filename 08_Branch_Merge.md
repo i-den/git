@@ -128,3 +128,103 @@ eff09fe Merge branch 'test-2'
 87cf089 (test-2) Deleted file that would cause potential conflict
 ...
 ```
+
+### Merge Conflict
+Creating a conflict with a test-3 branch
+
+```bash
+echo "Line added in master branch" > playground/conflicting-file.txt
+
+git add .
+git commit -m "Added line in conflicting file while in master branch"
+
+git checkout -b test-3
+echo "Line added in test-3 branch" > playground/conflicting-file.txt
+
+git add .
+git commit -m "Added line in conflicting file while in test-3 branch"
+```
+
+Merge Conflict
+```bash
+git merge test-3
+Auto-merging playground/conflicting-file.txt
+CONFLICT (content): Merge conflict in playground/conflicting-file.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+Conflicting file
+```bash
+git status
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   playground/conflicting-file.txt
+
+
+cat playground/conflicting-file.txt
+<<<<<<< HEAD
+Line added in master branch
+=======
+Line added in test-3 branch.
+>>>>>>> test-3
+```
+
+Staging Area files
+```bash
+git ls-files
+...
+100644 d2fee18dc4e677f5bec9f1c5baf76fe7300882f6 1       playground/conflicting-file.txt
+100644 978af8379d8ece09018559b8218593762f75826c 2       playground/conflicting-file.txt
+100644 85c08549366705690d9a7de4a3eac5965a125af6 3       playground/conflicting-file.txt
+
+# first - common to both branches, file during branching
+# second - changed in master branch
+# third - changed in test-3 branch
+```
+
+#### Resolving conflict
+Changing file
+```bash
+# OLD:
+<<<<<<< HEAD
+Line added in master branch
+=======
+Line added in test-3 branch.
+>>>>>>> test-3
+
+# NEW:
+Line added in master branch
+```
+
+```bash
+git status
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   playground/conflicting-file.txt
+```
+
+Committing resolved conflict
+```bash
+git add playground/conflicting-file.txt
+git commit -m "Resolved conflict"
+
+
+git ls-files               # file has only 1 version now
+100644 978af8379d8ece09018559b8218593762f75826c 0       playground/conflicting-file.txt
+
+
+
+git commit -m "Resolved conflict"
+[master 89b9caa] Resolved conflict
+```
