@@ -4,7 +4,7 @@ Two different merges
 
 Receiving branch - branch that will receive the merge
  
-#### Fast Forward Merge
+### Fast Forward Merge
  - Possible only when there are no further commits in the receiving branch after the commit where the feature branch was created
  - Simply moves pointer to the last commit in feature branch
  
@@ -17,7 +17,7 @@ Moves master pointer from last commit of master to last commit of merging featur
 Feature branch commits are part of master branch
 > pictures/FAST-FORWARD-3
 
-#### git merge in action
+#### Fast Forward in action
 Master Branch
 ```bash
 tree                            # master branch
@@ -60,3 +60,17 @@ Can delete feature branch afterward
 git branch -d test-1
 Deleted branch test-1 (was 41b2d38).
 ```
+
+### 3 Way Merge
+ 1. Creates new commit based on 3 other commits
+    - Ancestor
+    - last commit in receiving branch
+    - last commit in feature branch
+ 2. The new commit has two parents
+ 3. Those commits are unchanged as they're referred to
+
+> pictures/3-WAY-1.PNG
+>
+> pictures/3-WAY-2.PNG
+
+#### 3 Way in action
