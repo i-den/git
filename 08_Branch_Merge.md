@@ -74,3 +74,18 @@ Deleted branch test-1 (was 41b2d38).
 > pictures/3-WAY-2.PNG
 
 #### 3 Way in action
+Creating a new branch, adding a new commit to it
+```bash
+git checkout -b test-2                              # creates test-2 branch
+touch playground/test-6-added-in-test-2-branch.txt
+
+git add .
+git commit -m "Added test file in test-2 branch"
+```
+
+Adding a new commit to master
+```bash
+git checkout master
+touch touch playground/test-7-added-in-master-branch-after-adding-a-new-file-in-test-2-branch.txt      # eee Macarena
+
+```
