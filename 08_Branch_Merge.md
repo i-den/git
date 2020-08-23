@@ -75,6 +75,7 @@ Deleted branch test-1 (was 41b2d38).
 
 #### 3 Way in action
 Create new branch
+> pictures/3-WAY-3.PNG
 
 Create file in it
 ```bash
@@ -116,4 +117,14 @@ parent 586ab6dc5a9834bd916eea76793b615c62723940
 parent 87cf089adbfc55b40faef9077314f89fb4cf1b7e
 author i-den <24753710+i-den@users.noreply.github.com> 1598208273 +0300
 committer i-den <24753710+i-den@users.noreply.github.com> 1598208273 +0300
+```
+
+the parents can be observed with git log
+```bash
+git log --oneline
+
+eff09fe Merge branch 'test-2'
+586ab6d Deleted file that will cause potential conflict as well
+87cf089 (test-2) Deleted file that would cause potential conflict
+...
 ```
