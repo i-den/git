@@ -1,1 +1,1 @@
-Line added in test-3 branch
+Line added in test-3 branch.
