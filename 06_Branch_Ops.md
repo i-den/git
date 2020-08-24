@@ -86,6 +86,9 @@ git push --set-upstream origin test-3
 or
 ```bash
 git push -u -v origin test-3
+```
+
+```bash
 Pushing to https://github.com/i-den/git.git
 Counting objects: 28, done.
 Delta compression using up to 16 threads.
@@ -102,4 +105,10 @@ To https://github.com/i-den/git.git
  * [new branch]      test-3 -> test-3
 Branch 'test-3' set up to track remote branch 'test-3' from 'origin'.
 updating local tracking ref 'refs/remotes/origin/test-3'
+```
+
+#### Delete Remote Branch
+```bash
+git push -d <remote_name> <branch_name>     # remote
+git branch -d <branch_name>                 # local
 ```

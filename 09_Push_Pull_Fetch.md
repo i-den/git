@@ -154,3 +154,17 @@ Fast-forward
  create mode 100644 playground/test-file-added-via-github
 ```
 
+#### show ref
+```bash
+git show-ref
+
+95477e93e3a05f2554dadf03edaeb3917157ac2b refs/heads/master
+24c33fc5981fa7d6c7ed3dd2b4958de7a11f210c refs/heads/test-2
+9bfcc52b57579d3514637528472dc2c22bbc5860 refs/heads/test-3
+04b0749808ab7c7685ec42d08e4e1189c059a88c refs/remotes/origin/master
+24c33fc5981fa7d6c7ed3dd2b4958de7a11f210c refs/remotes/origin/test-2
+9bfcc52b57579d3514637528472dc2c22bbc5860 refs/remotes/origin/test-3
+
+.git/refs/heads
+.git/refs/remotes/origin
+```
