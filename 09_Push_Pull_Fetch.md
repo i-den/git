@@ -59,7 +59,7 @@ git remote show origin
     test-2 pushes to test-2 (up to date)
 ``` 
 
-#### Fetch
+### Fetch
 Creating repo in Github named git-added-branch
 ```bash
 git branch -r
@@ -85,7 +85,48 @@ git branch -r                               # listed in remote branches
   origin/master
   origin/test-2
 
+git checkout git-added-branch
+Branch 'git-added-branch' set up to track remote branch 'git-added-branch' from 'origin'.
+Switched to a new branch 'git-added-branch'
 
+* git-added-branch 04b0749 [origin/git-added-branch] Added Merge Conflict info to Branch Merge
+  master           a951613 [origin/master: ahead 3] Added info to Push Pull Fetch
+  test-2           87cf089 [origin/test-2] Deleted file that would cause potential conflict
 ```
 
+Branch gid-added-branch deleted at Github
+
+ow to know that remote branch is deleted
+```bash
+git remote show origin
+* remote origin
+  Fetch URL: https://github.com/i-den/git.git
+  Push  URL: https://github.com/i-den/git.git
+  HEAD branch: master
+  Remote branches:
+    master                               tracked
+    refs/remotes/origin/git-added-branch stale (use 'git remote prune' to remove)     # shown as prune
+    test-2                               tracked
+  Local branches configured for 'git pull':
+    git-added-branch merges with remote git-added-branch
+    master           merges with remote master
+    test-2           merges with remote test-2
+  Local refs configured for 'git push':
+    master pushes to master (fast-forwardable)
+    test-2 pushes to test-2 (up to date)
+
+
+git remote prune origin
+Pruning origin
+URL: https://github.com/i-den/git.git
+ * [pruned] origin/git-added-branch
+
+  git-added-branch 04b0749 [origin/git-added-branch: gone] Added Merge Conflict info to Branch Merge      # gone
+* master           a951613 [origin/master: ahead 3] Added info to Push Pull Fetch
+  test-2           87cf089 [origin/test-2] Deleted file that would cause potential conflict
+```
+
+### Pull
+Pull merges remote branch into current branch
+> pictures/PULL.png
 
