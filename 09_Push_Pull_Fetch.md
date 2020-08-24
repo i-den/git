@@ -141,3 +141,16 @@ Process
  - will merge remote branch into current branch / git merge FETCH_HEAD
 > pictures/PULL-2.png
 
+Create file in test-2 branch via Github, then pulling
+```bash
+git pull -v
+From https://github.com/i-den/git
+ = [up to date]      test-2     -> origin/test-2
+ = [up to date]      master     -> origin/master
+Updating 87cf089..24c33fc
+Fast-forward
+ playground/test-file-added-via-github | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 playground/test-file-added-via-github
+```
+
