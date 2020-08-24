@@ -128,5 +128,16 @@ URL: https://github.com/i-den/git.git
 
 ### Pull
 Pull merges remote branch into current branch
-> pictures/PULL.png
+ - first fetches
+ - then merges FETCH_HEAD
+> pictures/PULL-1.png
+
+Process
+ - checkout local branch to be pulled
+ - check tracking branch with git branch -vv
+ - git pull
+ - will fetch all changes from remote repo / git fetch used
+ - will update FETCH_HEAD that has hashes of last commits in remote repo
+ - will merge remote branch into current branch / git merge FETCH_HEAD
+> pictures/PULL-2.png
 
