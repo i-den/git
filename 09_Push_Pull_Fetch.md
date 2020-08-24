@@ -29,13 +29,63 @@ Tracking branch
  
 ```bash
 git log --oneline
-02e44ee (HEAD -> master) Added Push Pull Fetch, picture for it
+cbf306d (HEAD -> master) Adjusted Push Pull Fetch
+02e44ee Added Push Pull Fetch, picture for it
 04b0749 (origin/master) Added Merge Conflict info to Branch Merge
 
 git branch -vv             # local repo
-* master 02e44ee [origin/master: ahead 1] Added Push Pull Fetch, picture for it
-  test-2 87cf089 Deleted file that would cause potential conflict
+* master cbf306d [origin/master: ahead 2] Adjusted Push Pull Fetch
+  test-2 87cf089 [origin/test-2] Deleted file that would cause potential conflict
 
 git branch -r -v           # remote repo
   origin/master 04b0749 Added Merge Conflict info to Branch Merge
+```
+#### git remote show origin
+ - shows all info for local and remote branches
+```bash
+git remote show origin
+* remote origin
+  Fetch URL: https://github.com/i-den/git.git
+  Push  URL: https://github.com/i-den/git.git
+  HEAD branch: master
+  Remote branches:
+    master tracked
+    test-2 tracked
+  Local branches configured for 'git pull':
+    master merges with remote master
+    test-2 merges with remote test-2
+  Local refs configured for 'git push':
+    master pushes to master (fast-forwardable)
+    test-2 pushes to test-2 (up to date)
 ``` 
+
+#### Fetch
+Creating repo in Github named git-added-branch
+```bash
+git branch -r
+  origin/master
+  origin/test-2
+```
+The newly created branch in remote repo is not listed.
+
+Fetching remote changes
+```bash
+git fetch                                   # fetch changes
+From https://github.com/i-den/git
+ * [new branch]      git-added-branch -> origin/git-added-branch
+
+
+git branch -vv                              # still not listed
+* master cbf306d [origin/master: ahead 2] Adjusted Push Pull Fetch
+  test-2 87cf089 [origin/test-2] Deleted file that would cause potential conflict
+
+
+git branch -r                               # listed in remote branches
+  origin/git-added-branch
+  origin/master
+  origin/test-2
+
+
+```
+
+
