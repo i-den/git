@@ -39,3 +39,16 @@ git commit --ammend -m "New msg for last commit"
 ### cherry-pick
 Takes any commit and inserts it into currently checked out branch as the last commit
 
+Makes changes in new branch
+```bash
+git checkout -b test-6
+# changes files in playground, adds, commits - 4c53e51
+
+git checkout master
+git cherry-pick 4c53e51
+```
+
+Can skip committing on local branch
+```bash
+git cherry-pick --no-commit <commit_hash> 
+```
