@@ -96,6 +96,6 @@ git log --oneline
 #### git checkout
 Overwrites the Working Directory to a specific branch
 ```bash
-
+git checkout <commit_hash>
 ```
 
