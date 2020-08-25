@@ -46,10 +46,10 @@ ref: refs/heads/master
 ```
 
 HEAD to master branch
-> pictures/HEAD-1
+<img src="https://raw.githubusercontent.com/i-den/git/master/pictures/HEAD-1.PNG">
 
 HEAD to commit // detached HEAD state
-> pictures/HEAD-2
+<img src="https://raw.githubusercontent.com/i-den/git/master/pictures/HEAD-2.PNG">
 
 #### git checkout
 Changes HEAD to Commit/Branch

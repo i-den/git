@@ -1,4 +1,4 @@
-> pictures/PUSH_PULL_FETCH.PNG
+<img src="https://raw.githubusercontent.com/i-den/git/master/pictures/PUSH_PULL_FETCH.PNG">
 
 #### Origin
  - the remote repository
@@ -130,7 +130,8 @@ URL: https://github.com/i-den/git.git
 Pull merges remote branch into current branch
  - first fetches
  - then merges FETCH_HEAD
-> pictures/PULL-1.png
+
+<img src="https://raw.githubusercontent.com/i-den/git/master/pictures/PULL-1.PNG">
 
 Process
  - checkout local branch to be pulled
@@ -139,7 +140,9 @@ Process
  - will fetch all changes from remote repo / git fetch used
  - will update FETCH_HEAD that has hashes of last commits in remote repo
  - will merge remote branch into current branch / git merge FETCH_HEAD
-> pictures/PULL-2.png
+
+<img src="https://raw.githubusercontent.com/i-den/git/master/pictures/PULL-2.PNG">
+
 
 Create file in test-2 branch via Github, then pulling
 ```bash

@@ -9,13 +9,13 @@ Receiving branch - branch that will receive the merge
  - Simply moves pointer to the last commit in feature branch
  
 There are no other commits in master after branching feature branch
-> pictures/FAST-FORWARD-1
+<img src="https://raw.githubusercontent.com/i-den/git/master/pictures/FAST-FORWARD-1.PNG">
 
 Moves master pointer from last commit of master to last commit of merging feature branch
-> pictures/FAST-FORWARD-2
+<img src="https://raw.githubusercontent.com/i-den/git/master/pictures/FAST-FORWARD-2.PNG">
 
 Feature branch commits are part of master branch
-> pictures/FAST-FORWARD-3
+<img src="https://raw.githubusercontent.com/i-den/git/master/pictures/FAST-FORWARD-3.PNG">
 
 #### Fast Forward in action
 Master Branch
@@ -69,13 +69,14 @@ Deleted branch test-1 (was 41b2d38).
  2. The new commit has two parents
  3. Those commits are unchanged as they're referred to
 
-> pictures/3-WAY-1.PNG
->
-> pictures/3-WAY-2.PNG
+<img src="https://raw.githubusercontent.com/i-den/git/master/pictures/3-WAY-1.PNG">
+New commit is made
+<img src="https://raw.githubusercontent.com/i-den/git/master/pictures/3-WAY-2.PNG">
 
 #### 3 Way in action
 Create new branch
-> pictures/3-WAY-3.PNG
+
+<img src="https://raw.githubusercontent.com/i-den/git/master/pictures/3-WAY-3.PNG">
 
 Create file in it
 ```bash

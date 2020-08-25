@@ -60,4 +60,6 @@ git stash
 ```
 
 ### Rebase with Squash
-
+```bash
+rebase -i <commit_hash>
+```
