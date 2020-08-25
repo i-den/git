@@ -29,4 +29,5 @@ First, rewinding head to replay your work on top of it...
 Applying: Added test-5 file
 ```
 
+> pictures/REBASE-3.png
 
