@@ -52,3 +52,12 @@ Can skip committing on local branch
 ```bash
 git cherry-pick --no-commit <commit_hash> 
 ```
+
+### stash
+Allows to save changes without committing
+```bash
+git stash
+```
+
+### Rebase with Squash
+
